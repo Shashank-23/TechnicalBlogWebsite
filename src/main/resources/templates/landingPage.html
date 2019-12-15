@@ -1,10 +1,18 @@
 <! Doctype html>
-<head>
-    <title></title>
+<html xmlns:th>
+<head >
+    <header th:replace="layout :: logged-out">hoDibaba</header>
 </head>
 <body>
-<a href="">Login</a>
-<a href="">Register</a>
+<h1>All Posts</h1>
+<main >
+    <post th:each="p:${postData}">
+        <h2 th:text= ${p.PostTitle}></h2><br>
+        Post Date : <h3 th:text = ${p.date}></h3>
+        <p th:text = ${p.PostBody}></p>
+    </post>
+</main>
+
 <h1></h1>
 </body>
 </html>

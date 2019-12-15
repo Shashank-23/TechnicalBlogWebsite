@@ -1,0 +1,13 @@
+<!Doctype html>
+<html xmlns:th>
+<title>Login Page</title>
+<header th:replace="layout :: logged-out"></header>
+<h1>***** User login page *****</h1>
+<form method="post" th:object="${User}">
+    <label for="username">Enter User Name</label>
+    <input type="text" id="username"/><br>
+    <label for="password">Enter User Password</label>
+   <input type="password" id="password"/><br>
+    <input type="submit" value="Login"/>
+</form>
+</html>

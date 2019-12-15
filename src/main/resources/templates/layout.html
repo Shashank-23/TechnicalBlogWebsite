@@ -1,0 +1,16 @@
+<!Doctype html>
+<html xmlns:th>
+<head>
+    <header th:fragment="logged-out">
+        <a href="user/login">Login</a>
+        <a href="user/registeration">Registeration</a>
+    </header>
+
+    <header th:fragment="logged-in">
+        <form method="post" th:action="${userpost}">
+            <input type="submit" value="Logout"/>
+        </form>
+
+    </header>
+</head>
+</html>
